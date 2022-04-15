@@ -16,8 +16,7 @@ document.addEventListener('DOMContentLoaded', () => {
     hamburger.classList.remove('active');
     navMenu.classList.remove('active');
     hamburger.innerHTML = '<i class="fas fa-bars"></i>';
-  }
+  };
 
   navLink.forEach((n) => n.addEventListener('click', closeMenu));
-
 });
