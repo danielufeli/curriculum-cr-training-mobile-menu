@@ -521,7 +521,7 @@ textarea {
     align-items: flex-start;
   }
 
-  .about-me-section > * {
+  .about-me-section>* {
     max-width: 50vw;
     margin: 15px 0;
   }
@@ -573,6 +573,16 @@ textarea {
     display: flex;
   }
 
+  .menu-bars {
+    align-items: end;
+  }
+
+  #mobile-nav>ul>li {
+    text-align: left;
+    width: 100%;
+    border-bottom: white solid 1px;
+  }
+
   #intro,
   #about-me {
     position: inherit;
@@ -580,21 +590,20 @@ textarea {
 
   .nav-item,
   a {
-    color: #1a1a1a;
+    color: #fff5e1;
   }
 
   .nav-menu {
     position: fixed;
     left: -100%;
-    top: 5rem;
+    top: 2rem;
     flex-direction: column;
-    background-color: #fff;
     width: 100%;
-    border-radius: 10px;
-    text-align: center;
+    background-color: #3c3a39;
     transition: 0.3s;
-    box-shadow: 0 10px 27px rgba(0, 0, 0, 0.05);
   }
+
+
 
   .nav-menu.active {
     left: 0;

@@ -12,10 +12,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const navLink = document.querySelectorAll('.nav-item');
 
-  function closeMenu() {
+  const closeMenu = () => {
     hamburger.classList.remove('active');
     navMenu.classList.remove('active');
+    hamburger.innerHTML = '<i class="fas fa-bars"></i>';
   }
 
   navLink.forEach((n) => n.addEventListener('click', closeMenu));
+
 });
