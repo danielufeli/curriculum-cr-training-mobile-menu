@@ -27,7 +27,12 @@ header {
   color: white;
 }
 
-#desktop-nav, #desktop-nav ul {
+#desktop-nav,
+#desktop-nav ul {
+  display: none;
+}
+
+#mobile-nav {
   display: none;
 }
 
@@ -411,9 +416,7 @@ textarea {
   align-items: center;
   justify-content: space-around;
   padding: 5vh;
-  filter:
-    invert(67%) sepia(46%) saturate(986%) hue-rotate(179deg)
-    brightness(92%) contrast(82%);
+  filter: invert(67%) sepia(46%) saturate(986%) hue-rotate(179deg) brightness(92%) contrast(82%);
 }
 
 @media all and (min-width: 720px) {
@@ -558,5 +561,53 @@ textarea {
   .social-icon {
     width: 3vw;
     height: 32px;
+  }
+
+  #mobile-nav {
+    display: none;
+  }
+}
+
+@media all and (max-width: 720px) {
+  #mobile-nav {
+    display: flex;
+  }
+
+  .menu-bars {
+    align-items: end;
+  }
+
+  #mobile-nav > ul > li {
+    text-align: left;
+    width: 100%;
+    border-bottom: white solid 1px;
+  }
+
+  #intro,
+  #about-me {
+    position: inherit;
+  }
+
+  .nav-item,
+  a {
+    color: #fff5e1;
+  }
+
+  .nav-menu {
+    position: fixed;
+    left: -100%;
+    top: 2rem;
+    flex-direction: column;
+    width: 100%;
+    background-color: #3c3a39;
+    transition: 0.3s;
+  }
+
+  .nav-menu.active {
+    left: 0;
+  }
+
+  .nav-item {
+    margin: 0.5rem 0;
   }
 }
